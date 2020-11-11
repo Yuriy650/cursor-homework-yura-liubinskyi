@@ -3,13 +3,13 @@ let meat = 123.965;
 let fish = 90.2345;
 
 let maxPrice = Math.max(bread, meat, fish);
-console.log(maxPrice);
+console.log('Максимальна ціна: ' + maxPrice);
 
 let minPrice = Math.min(bread, meat, fish);
-console.log(minPrice);
+console.log('Мінімальна ціна: ' + minPrice);
 
 let totalPrice = bread + meat + fish;
-console.log(totalPrice);
+console.log('Загальна вартість товарів: ' + totalPrice);
 
 let integerTotalPrice = Math.floor(totalPrice);
 console.log(integerTotalPrice);
@@ -22,11 +22,14 @@ let roundingLessHundredTotalPrice = Math.floor((totalPrice) / 100) * 100;
 
 console.log(roundingLessHundredTotalPrice);
 
-if ((integerTotalPrice) % 2 === 0) {
-    console.log(true);
+isEvenPrice = integerTotalPrice%2 === 0;
+console.log('Число парне? ' + isEvenPrice);
+
+/*if ((integerTotalPrice) % 2 === 0) {
+    console.log('Число парне? ' + true);
 } else {
-    console.log(false);
-}
+    console.log('Число парне? ' + false);
+}*/
 
 let restPay = 500 - totalPrice;
 
@@ -81,6 +84,8 @@ console.log(`Максимальна ціна: ${maxPrice},
 Сума товарів округлену до сотень в більшу сторону: ${roundingHundredTotalPrice},
 Сума решти: ${restPay},
 середнє значення цін, заокруглене до сотих: ${averagePrice},
+
+Число парне? - ${isEvenPrice},
 
 Знижка на хліб: ${discountBread}, 
 Вартість хліба зі знижкою: ${newPriceBread},
