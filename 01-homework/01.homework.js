@@ -49,9 +49,9 @@ console.log({
     discountFish: discountFish
 });
 
-let profitBread = bread/2 - discountBread;
-let profitMeat = meat/2 - discountMeat;
-let profitFish = fish/2 - discountFish;
+let profitBread = Math.floor((bread/2 - discountBread)*100)/100;
+let profitMeat = Math.floor((meat/2 - discountMeat)*100)/100;
+let profitFish = Math.floor((fish/2 - discountFish)*100)/100;
 
 function newPrice(price) {
     console.log(Math.floor((price - Math.random() * price) * 100) / 100);
@@ -73,9 +73,9 @@ console.log(`Максимальна ціна: ${maxPrice},
 Мінімальна ціна: ${minPrice},
 вартість всіх товарів: ${totalPrice},
 Округлення в МЕНШУ сторону: ${integerTotalPrice},
-Сума товарів округлену до сотень в більшу сторону: ${roundingLessHundredTotalPrice},
+Сума товарів округлену до сотень в більшу сторону: ${roundingHundredTotalPrice},
 Сума решти: ${restPay},
-середнє значення цін: ${averagePrice},
+середнє значення цін, заокруглене до сотих: ${averagePrice},
 Знижка на хліб: ${discountBread}, 
 випадковий чистий прибуток: ${profitBread},
 Знижка на рибу: ${discountFish},
