@@ -1,17 +1,17 @@
-let bread = 15.678;
-let meat = 123.965;
-let fish = 90.2345;
+let breadPrice = 15.678;
+let meatPrice = 123.965;
+let fishPrice = 90.2345;
 
-let maxPrice = Math.max(bread, meat, fish);
+let maxPrice = Math.max(breadPrice, meatPrice, fishPrice);
 console.log('Максимальна ціна: ' + maxPrice);
 
-let minPrice = Math.min(bread, meat, fish);
+let minPrice = Math.min(breadPrice, meatPrice, fishPrice);
 console.log('Мінімальна ціна: ' + minPrice);
 
-let totalPrice = bread + meat + fish;
+let totalPrice = breadPrice + meatPrice + fishPrice;
 console.log('Загальна вартість товарів: ' + totalPrice);
 
-let integerTotalPrice = Math.floor(bread) + Math.floor(meat) + Math.floor(fish);
+let integerTotalPrice = Math.floor(breadPrice) + Math.floor(meatPrice) + Math.floor(fishPrice);
 console.log('Ціле число: ' + integerTotalPrice);
 
 let roundingHundredTotalPrice = Math.ceil((totalPrice) / 100) * 100;
@@ -30,8 +30,8 @@ console.log('Число парне? ' + isEvenPrice);
 } else {
     console.log('Число парне? ' + false);
 }*/
-
-let restPay = Math.floor((500 - totalPrice)*100)/100;
+let clientPay = 500;
+let restPay = Math.floor((clientPay - totalPrice)*100)/100;
 
 console.log('Решта: ' + restPay);
 
@@ -44,9 +44,9 @@ console.log('Середня ціна, до сотих: ' + averagePrice);
 let discount = Math.round(Math.random()*100);
 console.log('Знижка становить: ' + discount + '%');
 
-let discountBread = Math.floor(bread * Math.random()*100)/100;
-let discountMeat = Math.floor(meat * Math.random()*100)/100;
-let discountFish = Math.floor(fish * Math.random()*100)/100;
+let discountBread = Math.floor(breadPrice * Math.random()*100)/100;
+let discountMeat = Math.floor(meatPrice * Math.random()*100)/100;
+let discountFish = Math.floor(fishPrice * Math.random()*100)/100;
 
 console.log({
     discountBread: discountBread,
@@ -54,14 +54,14 @@ console.log({
     discountFish: discountFish
 });
 
-let newPriceBread = Math.floor((bread - discountBread)*100)/100;
-let newPriceMeat = Math.floor((meat - discountMeat)*100)/100;
-let newPriceFish = Math.floor((fish - discountFish)*100)/100;
+let newPriceBread = Math.floor((breadPrice - discountBread)*100)/100;
+let newPriceMeat = Math.floor((meatPrice - discountMeat)*100)/100;
+let newPriceFish = Math.floor((fishPrice - discountFish)*100)/100;
 
 
-let profitBread = Math.floor((bread/2 - discountBread)*100)/100;
-let profitMeat = Math.floor((meat/2 - discountMeat)*100)/100;
-let profitFish = Math.floor((fish/2 - discountFish)*100)/100;
+let profitBread = Math.floor((breadPrice/2 - discountBread)*100)/100;
+let profitMeat = Math.floor((meatPrice/2 - discountMeat)*100)/100;
+let profitFish = Math.floor((fishPrice/2 - discountFish)*100)/100;
 
 /*
 function newPrice(price) {
