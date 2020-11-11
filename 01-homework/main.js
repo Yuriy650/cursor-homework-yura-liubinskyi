@@ -11,7 +11,7 @@ console.log('Мінімальна ціна: ' + minPrice);
 let totalPrice = bread + meat + fish;
 console.log('Загальна вартість товарів: ' + totalPrice);
 
-let integerTotalPrice = Math.floor(totalPrice);
+let integerTotalPrice = Math.floor(bread) + Math.floor(meat) + Math.floor(fish);
 console.log(integerTotalPrice);
 
 let roundingHundredTotalPrice = Math.ceil((totalPrice) / 100) * 100;
@@ -31,7 +31,7 @@ console.log('Число парне? ' + isEvenPrice);
     console.log('Число парне? ' + false);
 }*/
 
-let restPay = 500 - totalPrice;
+let restPay = Math.floor((500 - totalPrice)*100)/100;
 
 console.log(restPay);
 
@@ -60,7 +60,8 @@ let profitBread = Math.floor((bread/2 - discountBread)*100)/100;
 let profitMeat = Math.floor((meat/2 - discountMeat)*100)/100;
 let profitFish = Math.floor((fish/2 - discountFish)*100)/100;
 
-/*function newPrice(price) {
+/*
+function newPrice(price) {
     console.log(Math.floor((price - Math.random() * price) * 100) / 100);
 };
 
@@ -74,7 +75,8 @@ function profit(price) {
 
 profit(bread);
 profit(meat);
-profit(fish);*/
+profit(fish);
+*/
 
 console.log(`Максимальна ціна: ${maxPrice},
 Мінімальна ціна: ${minPrice},
