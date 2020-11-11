@@ -22,12 +22,11 @@ let roundingLessHundredTotalPrice = Math.floor((totalPrice) / 100) * 100;
 
 console.log(roundingLessHundredTotalPrice);
 
-if ((integerTotalPrice) % 2 == 0) {
+if ((integerTotalPrice) % 2 === 0) {
     console.log(true);
 } else {
     console.log(false);
 }
-;
 
 let restPay = 500 - totalPrice;
 
@@ -49,11 +48,16 @@ console.log({
     discountFish: discountFish
 });
 
+let newPriceBread = Math.floor((bread - discountBread)*100)/100;
+let newPriceMeat = Math.floor((meat - discountMeat)*100)/100;
+let newPriceFish = Math.floor((fish - discountFish)*100)/100;
+
+
 let profitBread = Math.floor((bread/2 - discountBread)*100)/100;
 let profitMeat = Math.floor((meat/2 - discountMeat)*100)/100;
 let profitFish = Math.floor((fish/2 - discountFish)*100)/100;
 
-function newPrice(price) {
+/*function newPrice(price) {
     console.log(Math.floor((price - Math.random() * price) * 100) / 100);
 };
 
@@ -67,20 +71,28 @@ function profit(price) {
 
 profit(bread);
 profit(meat);
-profit(fish);
+profit(fish);*/
 
 console.log(`Максимальна ціна: ${maxPrice},
 Мінімальна ціна: ${minPrice},
 вартість всіх товарів: ${totalPrice},
+
 Округлення в МЕНШУ сторону: ${integerTotalPrice},
 Сума товарів округлену до сотень в більшу сторону: ${roundingHundredTotalPrice},
 Сума решти: ${restPay},
 середнє значення цін, заокруглене до сотих: ${averagePrice},
+
 Знижка на хліб: ${discountBread}, 
-випадковий чистий прибуток: ${profitBread},
+Вартість хліба зі знижкою: ${newPriceBread},
+Чистий прибуток: ${profitBread},
+
 Знижка на рибу: ${discountFish},
-випадковий чистий прибуток: ${profitFish},
+Вартість риби зi знижкою: ${newPriceFish},
+Чистий прибуток: ${profitFish},
+
 Знижка на м"ясо: ${discountMeat},
-випадковий чистий прибуток: ${profitMeat}`);
+Вартість м"яса зi знижкою: ${newPriceMeat},
+Чистий прибуток: ${profitMeat}`);
+
 
 
