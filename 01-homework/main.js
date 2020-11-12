@@ -37,7 +37,9 @@ console.log('Решта: ' + restPay);
 
 console.log('Середня ціна: ' + totalPrice / 3);
 
-let averagePrice = Math.floor((totalPrice / 3) * 100) / 100;
+let averagePrice = parseFloat((totalPrice/3).toFixed(2));
+
+//console.log(typeof(averagePrice));
 
 console.log('Середня ціна, до сотих: ' + averagePrice);
 
