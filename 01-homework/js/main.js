@@ -11,7 +11,7 @@ console.log('Мінімальна ціна: ' + minPrice);
 let totalPrice = breadPrice + meatPrice + fishPrice;
 console.log('Загальна вартість товарів: ' + totalPrice);
 
-let integerTotalPrice = Math.floor(breadPrice) + Math.floor(meatPrice) + Math.floor(fishPrice);
+let integerTotalPrice = Math.floor(totalPrice);
 console.log('Ціле число: ' + integerTotalPrice);
 
 let roundingHundredTotalPrice = Math.ceil((totalPrice) / 100) * 100;
@@ -22,7 +22,7 @@ let roundingLessHundredTotalPrice = Math.floor((totalPrice) / 100) * 100;
 
 console.log('Заокруглене значення: ' + roundingLessHundredTotalPrice);
 
-isEvenPrice = integerTotalPrice%2 === 0;
+isEvenPrice = integerTotalPrice % 2 === 0;
 console.log('Число парне? ' + isEvenPrice);
 
 /*if ((integerTotalPrice) % 2 === 0) {
@@ -31,24 +31,24 @@ console.log('Число парне? ' + isEvenPrice);
     console.log('Число парне? ' + false);
 }*/
 let clientPay = 500;
-let restPay = Math.floor((clientPay - totalPrice)*100)/100;
+let restPay = Math.floor((clientPay - totalPrice) * 100) / 100;
 
 console.log('Решта: ' + restPay);
 
 console.log('Середня ціна: ' + totalPrice / 3);
 
-let averagePrice = parseFloat((totalPrice/3).toFixed(2));
+let averagePrice = parseFloat((totalPrice / 3).toFixed(2));
 
 //console.log(typeof(averagePrice));
 
 console.log('Середня ціна, до сотих: ' + averagePrice);
 
-let discount = Math.round(Math.random()*100);
+let discount = Math.round(Math.random() * 100);
 console.log('Знижка становить: ' + discount + '%');
 
-let discountBread = Math.floor(breadPrice * Math.random()*100)/100;
-let discountMeat = Math.floor(meatPrice * Math.random()*100)/100;
-let discountFish = Math.floor(fishPrice * Math.random()*100)/100;
+let discountBread = parseFloat((breadPrice * discount / 100).toFixed(2));
+let discountMeat = parseFloat((meatPrice * discount / 100).toFixed(2));
+let discountFish = parseFloat((fishPrice * discount / 100).toFixed(2));
 
 console.log({
     discountBread: discountBread,
@@ -56,14 +56,14 @@ console.log({
     discountFish: discountFish
 });
 
-let newPriceBread = Math.floor((breadPrice - discountBread)*100)/100;
-let newPriceMeat = Math.floor((meatPrice - discountMeat)*100)/100;
-let newPriceFish = Math.floor((fishPrice - discountFish)*100)/100;
+let newPriceBread = parseFloat((breadPrice - discountBread).toFixed(2));
+let newPriceMeat = parseFloat((meatPrice - discountMeat).toFixed(2));
+let newPriceFish = parseFloat((fishPrice - discountFish).toFixed(2))
 
 
-let profitBread = Math.floor((breadPrice/2 - discountBread)*100)/100;
-let profitMeat = Math.floor((meatPrice/2 - discountMeat)*100)/100;
-let profitFish = Math.floor((fishPrice/2 - discountFish)*100)/100;
+let profitBread = Math.floor((breadPrice / 2 - discountBread) * 100) / 100;
+let profitMeat = Math.floor((meatPrice / 2 - discountMeat) * 100) / 100;
+let profitFish = Math.floor((fishPrice / 2 - discountFish) * 100) / 100;
 
 /*
 function newPrice(price) {
@@ -82,6 +82,16 @@ profit(bread);
 profit(meat);
 profit(fish);
 */
+$('#body-content').append(`<p>Максимальна ціна: ${maxPrice} грн.</p>`);
+$('#body-content').append(`<p>Мінімальна ціна: ${minPrice} грн.</p>`);
+$('#body-content').append(`<p>вартість всіх товарів: ${totalPrice} грн.</p>`);
+$('#body-content').append(`<p>Загальна сума - число парне?: ${isEvenPrice}</p>`);
+$('#body-content').append(`<p>Знижка ${discount}%, що становить:  ${discountBread} грн. </p> `);
+$('#body-content').append(`<p>Вартість товару зі знижкою: ${newPriceBread} грн.</p> `);
+$('#body-content').append(`<p>Чистий прибуток: ${profitBread} грн.</p>`);
+
+$('#list-data').append(`<li>Округлення в МЕНШУ сторону: ${integerTotalPrice}</li>`);
+
 
 console.log(`Максимальна ціна: ${maxPrice},
 Мінімальна ціна: ${minPrice},
