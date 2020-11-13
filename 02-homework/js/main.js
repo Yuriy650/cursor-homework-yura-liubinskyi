@@ -1,3 +1,40 @@
-const N = parseInt(prompt("Insert a number please"));
+let N = parseInt(prompt('Input a number please'));
+let M = parseInt(prompt('Input a number please'));
+//console.log(typeof N); тип буде число
+//console.log(N); значення NaN
 
-console.log(N);
+let p = confirm('Пропускати парні числа в діапазоні?');
+
+let s = 0;
+
+if (N && M) {
+    if (!p) {
+        for (N; N <= M; N++) {
+            s += N;
+
+        }
+        console.log(s);
+    } else {
+        for (N; N <= M; N++) {
+            if (N%2 === 0) {
+                continue;
+            } else {
+                s += N;
+            }
+        }
+        console.log(s);
+
+    }
+
+} else {
+    document.writeln('INPUT A NUMBERS PLEASE');
+}
+
+
+
+
+
+    
+
+
+
