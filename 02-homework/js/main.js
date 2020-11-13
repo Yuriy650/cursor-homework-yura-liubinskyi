@@ -1,23 +1,23 @@
-let N = parseInt(prompt('Input a number please'));
-let M = parseInt(prompt('Input a number please'));
+let n = parseInt(prompt('Input a number please'));
+let m = parseInt(prompt('Input a number please'));
 
 let p = confirm('Пропускати парні числа в діапазоні?');
 
 let s = 0;
 
-if (N && M) {
+if (n && m) {
     if (!p) {
-        for (N; N <= M; N++) {
-            s += N;
+        for (n; n <= m; n++) {
+            s += n;
 
         }
         console.log(s);
     } else {
-        for (N; N <= M; N++) {
-            if (N%2 === 0) {
+        for (n; n <= m; n++) {
+            if (n % 2 === 0) {
                 continue;
             } else {
-                s += N;
+                s += n;
             }
         }
         console.log(s);

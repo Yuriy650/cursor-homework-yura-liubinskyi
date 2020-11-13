@@ -1,9 +1,10 @@
 .shadow{
-    text-shadow: 0 0 3px black;
+    font-family: sans-serif;
+    text-shadow: 0 0 4px black;
     font-size: 1.2em;
     background: ghostwhite;
     text-align: center;
-    padding: initial;
     color: black;
+    padding-top: 50px;
 
 }
