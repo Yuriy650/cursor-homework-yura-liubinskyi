@@ -1,26 +1,26 @@
-let n = parseInt(prompt('Input a number please'));
-let m = parseInt(prompt('Input a number please'));
+let firstNumber = parseInt(prompt('Input a number please'));
+let secondNumber = parseInt(prompt('Input a number please'));
 
-let p = confirm('Пропускати парні числа в діапазоні?');
+let condition = confirm('Пропускати парні числа в діапазоні?');
 
-let s = 0;
+let sum = 0;
 
-if (n && m) {
-    if (!p) {
-        for (n; n <= m; n++) {
-            s += n;
+if (firstNumber && secondNumber) {
+    if (!condition) {
+        for (firstNumber; firstNumber <= secondNumber; firstNumber++) {
+            sum += firstNumber;
 
         }
-        console.log(s);
+        console.log(sum);
     } else {
-        for (n; n <= m; n++) {
-            if (n % 2 === 0) {
+        for (firstNumber; firstNumber <= secondNumber; firstNumber++) {
+            if (firstNumber % 2 === 0) {
                 continue;
             } else {
-                s += n;
+                sum += firstNumber;
             }
         }
-        console.log(s);
+        console.log(sum);
 
     }
 

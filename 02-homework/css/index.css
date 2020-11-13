@@ -1,4 +1,4 @@
-.shadow{
+body {
     font-family: sans-serif;
     text-shadow: 0 0 4px black;
     font-size: 1.2em;
