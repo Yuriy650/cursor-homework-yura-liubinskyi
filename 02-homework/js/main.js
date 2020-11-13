@@ -1,7 +1,5 @@
 let N = parseInt(prompt('Input a number please'));
 let M = parseInt(prompt('Input a number please'));
-//console.log(typeof N); тип буде число
-//console.log(N); значення NaN
 
 let p = confirm('Пропускати парні числа в діапазоні?');
 
