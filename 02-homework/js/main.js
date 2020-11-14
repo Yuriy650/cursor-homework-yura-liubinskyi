@@ -4,12 +4,12 @@ while (!firstNumber) {
     if (firstNumber === 0) {
         break;
     } else {
-        firstNumber = parseInt(prompt('Input a number please'));
+        firstNumber = parseInt(prompt('Input a first number please'));
     }
 
 }
 
-let secondNumber = parseInt(prompt('Input a number please'));
+let secondNumber = parseInt(prompt('Input a second number please'));
 
 while (!secondNumber) {
     if (secondNumber === 0) {
