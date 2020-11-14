@@ -1,8 +1,5 @@
 let firstNumber = parseInt(prompt('Input a number please'));
 
-console.log(typeof firstNumber);
-console.log(firstNumber);
-
 while (!firstNumber) {
     if (firstNumber === 0) {
         break;

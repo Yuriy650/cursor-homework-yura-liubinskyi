@@ -1,28 +1,28 @@
-let breadPrice = 15.678;
-let meatPrice = 123.965;
-let fishPrice = 90.2345;
+const BREAD_PRICE = 15.678;
+const MEAT_PRICE = 123.965;
+const FISH_PRICE = 90.2345;
 
-let maxPrice = Math.max(breadPrice, meatPrice, fishPrice);
-console.log('Максимальна ціна: ' + maxPrice);
+const MAX_PRICE = Math.max(BREAD_PRICE, MEAT_PRICE, FISH_PRICE);
+console.log('Максимальна ціна: ' + MAX_PRICE);
 
-let minPrice = Math.min(breadPrice, meatPrice, fishPrice);
-console.log('Мінімальна ціна: ' + minPrice);
+const MIN_PRICE = Math.min(BREAD_PRICE, MEAT_PRICE, FISH_PRICE);
+console.log('Мінімальна ціна: ' + MIN_PRICE);
 
-let totalPrice = breadPrice + meatPrice + fishPrice;
-console.log('Загальна вартість товарів: ' + totalPrice);
+const TOTAL_PRICE = BREAD_PRICE + MEAT_PRICE + FISH_PRICE;
+console.log('Загальна вартість товарів: ' + TOTAL_PRICE);
 
-let integerTotalPrice = Math.floor(totalPrice);
-console.log('Ціле число: ' + integerTotalPrice);
+const INTEGER_TOTAL_PRICE = Math.floor(TOTAL_PRICE);
+console.log('Ціле число: ' + INTEGER_TOTAL_PRICE);
 
-let roundingHundredTotalPrice = Math.ceil((totalPrice) / 100) * 100;
+const ROUNDING_HUNDRED_TOTAL_PRICE = Math.ceil((TOTAL_PRICE) / 100) * 100;
 
-console.log('Заокруглене значення: ' + roundingHundredTotalPrice);
+console.log('Заокруглене значення: ' + ROUNDING_HUNDRED_TOTAL_PRICE);
 
-let roundingLessHundredTotalPrice = Math.floor((totalPrice) / 100) * 100;
+const ROUNDING_LESS_HUNDRED_TOTAL_PRICE = Math.floor((TOTAL_PRICE) / 100) * 100;
 
-console.log('Заокруглене значення: ' + roundingLessHundredTotalPrice);
+console.log('Заокруглене значення: ' + ROUNDING_LESS_HUNDRED_TOTAL_PRICE);
 
-isEvenPrice = integerTotalPrice % 2 === 0;
+isEvenPrice = INTEGER_TOTAL_PRICE % 2 === 0;
 console.log('Число парне? ' + isEvenPrice);
 
 /*if ((integerTotalPrice) % 2 === 0) {
@@ -31,13 +31,13 @@ console.log('Число парне? ' + isEvenPrice);
     console.log('Число парне? ' + false);
 }*/
 let clientPay = 500;
-let restPay = Math.floor((clientPay - totalPrice) * 100) / 100;
+let restPay = Math.floor((clientPay - TOTAL_PRICE) * 100) / 100;
 
 console.log('Решта: ' + restPay);
 
-console.log('Середня ціна: ' + totalPrice / 3);
+console.log('Середня ціна: ' + TOTAL_PRICE / 3);
 
-let averagePrice = parseFloat((totalPrice / 3).toFixed(2));
+const averagePrice = parseFloat((TOTAL_PRICE / 3).toFixed(2));
 
 //console.log(typeof(averagePrice));
 
@@ -46,9 +46,9 @@ console.log('Середня ціна, до сотих: ' + averagePrice);
 let discount = Math.round(Math.random() * 100);
 console.log('Знижка становить: ' + discount + '%');
 
-let discountBread = parseFloat((breadPrice * discount / 100).toFixed(2));
-let discountMeat = parseFloat((meatPrice * discount / 100).toFixed(2));
-let discountFish = parseFloat((fishPrice * discount / 100).toFixed(2));
+let discountBread = parseFloat((BREAD_PRICE * discount / 100).toFixed(2));
+let discountMeat = parseFloat((MEAT_PRICE * discount / 100).toFixed(2));
+let discountFish = parseFloat((FISH_PRICE * discount / 100).toFixed(2));
 
 console.log({
     discountBread: discountBread,
@@ -56,33 +56,17 @@ console.log({
     discountFish: discountFish
 });
 
-let newPriceBread = parseFloat((breadPrice - discountBread).toFixed(2));
-let newPriceMeat = parseFloat((meatPrice - discountMeat).toFixed(2));
-let newPriceFish = parseFloat((fishPrice - discountFish).toFixed(2))
+let newPriceBread = parseFloat((BREAD_PRICE - discountBread).toFixed(2));
+let newPriceMeat = parseFloat((MEAT_PRICE - discountMeat).toFixed(2));
+let newPriceFish = parseFloat((FISH_PRICE - discountFish).toFixed(2))
 
 
-let profitBread = Math.floor((breadPrice / 2 - discountBread) * 100) / 100;
-let profitMeat = Math.floor((meatPrice / 2 - discountMeat) * 100) / 100;
-let profitFish = Math.floor((fishPrice / 2 - discountFish) * 100) / 100;
+let profitBread = Math.floor((BREAD_PRICE / 2 - discountBread) * 100) / 100;
+let profitMeat = Math.floor((MEAT_PRICE / 2 - discountMeat) * 100) / 100;
+let profitFish = Math.floor((FISH_PRICE / 2 - discountFish) * 100) / 100;
 
-/*
-function newPrice(price) {
-    console.log(Math.floor((price - Math.random() * price) * 100) / 100);
-};
 
-newPrice(bread);
-newPrice(fish);
-newPrice(meat);
-
-function profit(price) {
-    console.log(price / 2 - price * Math.random());
-};
-
-profit(bread);
-profit(meat);
-profit(fish);
-*/
-$('#body-content').append(`<p>Максимальна ціна: ${maxPrice} грн.</p>`);
+/*$('#body-content').append(`<p>Максимальна ціна: ${maxPrice} грн.</p>`);
 $('#body-content').append(`<p>Мінімальна ціна: ${minPrice} грн.</p>`);
 $('#body-content').append(`<p>вартість всіх товарів: ${totalPrice} грн.</p>`);
 $('#body-content').append(`<p>Загальна сума - число парне?: ${isEvenPrice}</p>`);
@@ -90,15 +74,15 @@ $('#body-content').append(`<p>Знижка ${discount}%, що становить
 $('#body-content').append(`<p>Вартість товару зі знижкою: ${newPriceBread} грн.</p> `);
 $('#body-content').append(`<p>Чистий прибуток: ${profitBread} грн.</p>`);
 
-$('#list-data').append(`<li>Округлення в МЕНШУ сторону: ${integerTotalPrice}</li>`);
+$('#list-data').append(`<li>Округлення в МЕНШУ сторону: ${integerTotalPrice}</li>`);*/
 
 
-console.log(`Максимальна ціна: ${maxPrice},
-Мінімальна ціна: ${minPrice},
-вартість всіх товарів: ${totalPrice},
+console.log(`Максимальна ціна: ${MAX_PRICE},
+Мінімальна ціна: ${MIN_PRICE},
+вартість всіх товарів: ${TOTAL_PRICE},
 
-Округлення в МЕНШУ сторону: ${integerTotalPrice},
-Сума товарів округлену до сотень в більшу сторону: ${roundingHundredTotalPrice},
+Округлення в МЕНШУ сторону: ${INTEGER_TOTAL_PRICE},
+Сума товарів округлену до сотень в більшу сторону: ${ROUNDING_HUNDRED_TOTAL_PRICE},
 Сума решти: ${restPay},
 середнє значення цін, заокруглене до сотих: ${averagePrice},
 
