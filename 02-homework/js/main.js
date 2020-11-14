@@ -1,10 +1,10 @@
-let firstNumber = parseInt(prompt('Input a number please'));
+let firstNumber = parseInt(prompt('Input a first number please'));
 
 while (!firstNumber) {
     if (firstNumber === 0) {
         break;
     } else {
-        firstNumber = parseInt(prompt('Input a first number please'));
+        firstNumber = parseInt(prompt('Try again input a first number please'));
     }
 
 }
@@ -15,7 +15,7 @@ while (!secondNumber) {
     if (secondNumber === 0) {
         break;
     } else {
-        secondNumber = parseInt(prompt('Input a number please'));
+        secondNumber = parseInt(prompt('Try again input a second number please'));
     }
 
 }
