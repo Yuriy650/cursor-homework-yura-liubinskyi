@@ -1,32 +1,49 @@
 let firstNumber = parseInt(prompt('Input a number please'));
+
+console.log(typeof firstNumber);
+console.log(firstNumber);
+
+while (!firstNumber) {
+    if (firstNumber === 0) {
+        break;
+    } else {
+        firstNumber = parseInt(prompt('Input a number please'));
+    }
+
+}
+
 let secondNumber = parseInt(prompt('Input a number please'));
 
-let condition = confirm('Пропускати парні числа в діапазоні?');
+while (!secondNumber) {
+    if (secondNumber === 0) {
+        break;
+    } else {
+        secondNumber = parseInt(prompt('Input a number please'));
+    }
+
+}
+
+let condition = confirm('Don\'t add even numbers?');
 
 let sum = 0;
 
-if (firstNumber && secondNumber) {
-    if (!condition) {
-        for (firstNumber; firstNumber <= secondNumber; firstNumber++) {
-            sum += firstNumber;
-
-        }
-        console.log(sum);
-    } else {
-        for (firstNumber; firstNumber <= secondNumber; firstNumber++) {
-            if (firstNumber % 2 === 0) {
-                continue;
-            } else {
-                sum += firstNumber;
-            }
-        }
-        console.log(sum);
-
+if (!condition) {
+    for (firstNumber; firstNumber <= secondNumber; firstNumber++) {
+        sum += firstNumber;
     }
-
+    console.log(sum);
 } else {
-    document.writeln('INPUT A NUMBERS PLEASE');
+    for (firstNumber; firstNumber <= secondNumber; firstNumber++) {
+        if (firstNumber % 2 === 0) {
+            continue;
+        } else {
+            sum += firstNumber;
+        }
+    }
+    console.log(sum);
 }
+
+
 
 
 
