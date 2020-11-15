@@ -22,14 +22,9 @@ const ROUNDING_LESS_HUNDRED_TOTAL_PRICE = Math.floor((TOTAL_PRICE) / 100) * 100;
 
 console.log('Заокруглене значення: ' + ROUNDING_LESS_HUNDRED_TOTAL_PRICE);
 
-let isEvenPrice = INTEGER_TOTAL_PRICE % 2 === 0;
-console.log('Число парне? ' + isEvenPrice);
+const IS_EVEN_PRICE = INTEGER_TOTAL_PRICE % 2 === 0;
+console.log('Число парне? ' + IS_EVEN_PRICE);
 
-/*if ((integerTotalPrice) % 2 === 0) {
-    console.log('Число парне? ' + true);
-} else {
-    console.log('Число парне? ' + false);
-}*/
 let clientPay = 500;
 const REST_PAY = Math.floor((clientPay - TOTAL_PRICE) * 100) / 100;
 
@@ -38,8 +33,6 @@ console.log('Решта: ' + REST_PAY);
 console.log('Середня ціна: ' + TOTAL_PRICE / 3);
 
 const averagePrice = parseFloat((TOTAL_PRICE / 3).toFixed(2));
-
-//console.log(typeof(averagePrice));
 
 console.log('Середня ціна, до сотих: ' + averagePrice);
 
@@ -65,18 +58,6 @@ const PROFIT_BREAD = Math.floor((BREAD_PRICE / 2 - DISCOUNT_BREAD) * 100) / 100;
 const PROFIT_MEAT = Math.floor((MEAT_PRICE / 2 - DISCOUNT_MEAT) * 100) / 100;
 const PROFIT_FISH = Math.floor((FISH_PRICE / 2 - DISCOUNT_FISH) * 100) / 100;
 
-
-/*$('#body-content').append(`<p>Максимальна ціна: ${maxPrice} грн.</p>`);
-$('#body-content').append(`<p>Мінімальна ціна: ${minPrice} грн.</p>`);
-$('#body-content').append(`<p>вартість всіх товарів: ${totalPrice} грн.</p>`);
-$('#body-content').append(`<p>Загальна сума - число парне?: ${isEvenPrice}</p>`);
-$('#body-content').append(`<p>Знижка ${discount}%, що становить:  ${discountBread} грн. </p> `);
-$('#body-content').append(`<p>Вартість товару зі знижкою: ${newPriceBread} грн.</p> `);
-$('#body-content').append(`<p>Чистий прибуток: ${profitBread} грн.</p>`);
-
-$('#list-data').append(`<li>Округлення в МЕНШУ сторону: ${integerTotalPrice}</li>`);*/
-
-
 console.log(`Максимальна ціна: ${MAX_PRICE},
 Мінімальна ціна: ${MIN_PRICE},
 вартість всіх товарів: ${TOTAL_PRICE},
@@ -86,7 +67,7 @@ console.log(`Максимальна ціна: ${MAX_PRICE},
 Сума решти: ${REST_PAY},
 середнє значення цін, заокруглене до сотих: ${averagePrice},
 
-Число парне? - ${isEvenPrice},
+Число парне? - ${IS_EVEN_PRICE},
 
 Знижка: ${DISCOUNT_BREAD}, 
 Вартість хліба зі знижкою: ${NEW_PRICE_BREAD},
