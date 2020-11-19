@@ -27,7 +27,6 @@ const getPowNumber = (number, power) => {
 
         powNumber = powNumber * number;
 
-        //console.log(powNumber);
 
     }
 
@@ -56,7 +55,7 @@ const getRealSalary = (salary) => {
 
     const TAX_MILITARY = 0.015;
 
-        salary = Math.ceil(salary * (1 - (TAX_INCOME + TAX_MILITARY)));
+    salary = Math.ceil(salary * (1 - (TAX_INCOME + TAX_MILITARY)));
 
     return salary;
 }
@@ -107,7 +106,6 @@ const cutSpace = (text) => {
 
 }
 
-//console.log(cutSpace('    vdvd f vv dfv fv e fv df ve df dv ev   '));
 
 const convertCurrency = (amountCurrency) => {
 
@@ -172,10 +170,7 @@ const deleteLetters = (word, letter = 'a') => {
 
     for (let char of word) {
 
-        if (char === letter) {
-
-
-        } else {
+        if (char !== letter) {
 
             subWord += char;
 
@@ -196,7 +191,7 @@ const getTextFromEnd = (text) => {
 
         textFromEnd += text[text.length - i];
 
-        //console.log(textFromEnd);
+
     }
 
     return textFromEnd;
@@ -208,8 +203,6 @@ const isPalindrome = (text) => {
     text = cutSpace(text).toLowerCase();
 
     let textFromEnd = getTextFromEnd(text).toLowerCase();
-
-    //console.log(textFromEnd);
 
 
     return text === textFromEnd;
@@ -236,28 +229,24 @@ const deleteDuplicateLetter = (sentence) => {
             sentenceWithoutDuplicate += sentence[i];
         }
 
-        //console.log(doubleLetter);
     }
 
-        for (let char of doubleLetter) {
+    for (let char of doubleLetter) {
 
-            for (let i = 0; i < sentence.length; i++) {
+        for (let i = 0; i < sentence.length; i++) {
 
-                if (char === sentence[i]) {
+            if (char === sentence[i]) {
 
-                    sentence = sentence.replace(sentence[i], ' ');
-                }
+                sentence = sentence.replace(sentence[i], ' ');
             }
-
-
         }
+
+
+    }
 
     return sentence;
 
 }
-
-console.log(deleteDuplicateLetter('ffwweffdrfrptwfgghgwerwetthfmnmyryrf'));
-
 
 
 document.writeln(`<p>Функція №1, максимальна цифра в числі: ${maxDigitInNumber(prompt('Дані для функції №1. Введіть число'))}</p>`);
