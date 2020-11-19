@@ -245,7 +245,7 @@ const deleteDuplicateLetter = (sentence) => {
 
                 if (char === sentence[i]) {
 
-                    sentence = sentence.replace(sentence[i], '');
+                    sentence = sentence.replace(sentence[i], ' ');
                 }
             }
 
@@ -256,7 +256,7 @@ const deleteDuplicateLetter = (sentence) => {
 
 }
 
-//console.log(deleteDuplicateLetter('ffwweffdrfrptwfgghgwerwetthfmnmyryrf'));
+console.log(deleteDuplicateLetter('ffwweffdrfrptwfgghgwerwetthfmnmyryrf'));
 
 
 
