@@ -23,10 +23,19 @@ const getPowNumber = (number, power) => {
 
     let powNumber = 1;
 
-    for (let i = 1; i <= power; i++) {
+    if (power > 0) {
 
-        powNumber = powNumber * number;
+        for (let i = 1; i <= power; i++) powNumber *= number;
 
+    } else if (power < 0) {
+
+        for (i = 1; i <= Math.abs(power); i++) powNumber = powNumber / number;
+
+        return powNumber;
+
+    } else {
+
+        powNumber = 1;
 
     }
 
@@ -133,7 +142,7 @@ const convertCurrency = (amountCurrency) => {
 
             subAmountCurrency = +subAmountCurrency.slice(0, position);
 
-            exchangeAmount = (subAmountCurrency / RATE).toFixed(2);
+            exchangeAmount = +(subAmountCurrency / RATE).toFixed(2);
 
         } else {
 
@@ -251,9 +260,10 @@ const deleteDuplicateLetter = (sentence) => {
 
 document.writeln(`<p>Функція №1, максимальна цифра в числі: ${maxDigitInNumber(prompt('Дані для функції №1. Введіть число'))}</p>`);
 
-document.writeln(`<p>Функція №2, повертає степінь числа: ${getPowNumber(prompt('Дані для функції №2. Введіть основу'),
+document.writeln(`<p>Функція №2, повертає степінь числа: ${getPowNumber(+prompt('Дані для функції №2. Введіть основу'),
 
-    prompt('Дані для функції №2. Введіть степінь'))}</p>`);
+    +prompt('Дані для функції №2. Введіть степінь'))}</p>`);
+
 
 document.writeln(`<p>Функція №3, повертає слова з великої букви: ${withCapitalLetter(prompt('Дані для функції №3. Введіть слово'))}</p>`);
 
@@ -278,3 +288,7 @@ document.writeln(`<p>Функція №9, видаляє задану букву
 document.writeln(`<p>Функція №10, перевіряє чи текст є паліндромом?: ${isPalindrome(prompt('Дані для функції №10. Паліндром?'))}</p>`);
 
 document.writeln(`<p>Функція №11, видаляє букви, які зустрічаються в тексті > 1 разу: ${deleteDuplicateLetter(prompt('Дані для функції №11. Введіть текст'))}</p>`);
+
+
+
+console.log(typeof Math.abs(-3));
