@@ -1,6 +1,8 @@
-const students = ['Олександр', 'Ігор', 'Лука', 'Олена', 'Елізабет', 'Кармен', 'Олексій', 'Світлана', 'Антон', 'Любов', 'Галя', 'Юра'];
+const students = ['Олександр', 'Ігор', 'Лука', 'Олена', 'Елізабет', 'Кармен', 'Олексій', 'Світлана', 'Антон', 'Любов', 'Галя', 'Юра', 'Дзвінка', 'Оля', 'Михайло'];
 
-const themes = ['Диференціальні рівняння', 'Теорія автоматів', 'Алгоритми і структури даних', 'Математичний аналіз', 'ТІМС', 'РЧП'];
+console.log(students.length);
+
+const themes = ['Диференціальні рівняння', 'Теорія автоматів', 'Логіка', 'Алгоритми і структури даних', 'Математичний аналіз', 'ТІМС', 'РЧП', 'KT'];
 
 const marks = [5, 5, 4, 3, 4, 5, 3, 4, 4];
 
@@ -37,7 +39,6 @@ const getGirls = (students) => {
 }
 
 
-
 const getBoys = (students) => {
 
     let copyStudents = [...students];
@@ -50,7 +51,7 @@ const getBoys = (students) => {
 
     let boys = [];
 
-    for (let i = 0; i <= copyStudents.length-1; i++) {
+    for (let i = 0; i < copyStudents.length; i++) {
 
         if ((copyStudents[i][copyStudents[i].length - 1] !== 'а' && copyStudents[i][copyStudents[i].length - 1] !== 'я' ||
             boysName.includes(copyStudents[i])) && !girlsName.includes(copyStudents[i])) {
@@ -69,32 +70,25 @@ const getBoys = (students) => {
 }
 
 
-
-
-
 const getPairs = (students) => {
 
-   let newCopyStudents = [...students];
+    let newCopyStudents = [...students];
 
-   let girls = getGirls(newCopyStudents);
+    let girls = getGirls(newCopyStudents);
 
-   let boys = getBoys(newCopyStudents);
+    let boys = getBoys(newCopyStudents);
 
-   let studentsPairs = [];
+    let studentsPairs = [];
 
-   for (i = 0; i < newCopyStudents.length/2; i++) {
+    for (let i = 0; i <= newCopyStudents.length / 2; i++) {
 
-       studentsPairs[i] = [boys[i], girls[i]];
-   }
+        studentsPairs[i] = [boys[i], girls[i]];
+    }
 
 
     return studentsPairs;
 
 }
-
-
-
-
 
 
 const getPairsThemes = (students, themes) => {
@@ -112,7 +106,7 @@ const getPairsThemes = (students, themes) => {
         pairs[i] = pairs[i].join(' i ');
     }
 
-    for (let i=0; i < themes.length; i++) {
+    for (let i = 0; i < pairs.length; i++) {
 
         pairsProjects[i] = [pairs[i], copyThemes[i]];
 
@@ -123,49 +117,40 @@ const getPairsThemes = (students, themes) => {
 }
 
 
-
-
-
 const getStudentsMarks = (students, marks) => {
 
     let copyStudents = [...students];
 
     let studentsMarks = [];
 
-    for(let i = 0; i < copyStudents.length; i++) {
+    for (let i = 0; i < copyStudents.length; i++) {
 
-        marks[i] = marks[Math.floor(marks.length*Math.random())];
+        marks[i] = marks[Math.floor(marks.length * Math.random())];
 
         studentsMarks[i] = [copyStudents[i], marks[i]];
     }
 
     return studentsMarks;
 
- }
-
-
+}
 
 
 const getPairsThemesMarks = (students, themes) => {
 
     let pairsProjects = getPairsThemes(students, themes);
 
-    //let pairsThemesMarks = [];
-
     let marks;
 
     for (let i = 0; i < pairsProjects.length; i++) {
 
-        marks = Math.ceil(Math.random()*5);
+        marks = Math.ceil(Math.random() * 5);
 
-       pairsProjects[i].push(marks);
+        pairsProjects[i].push(marks);
 
     }
 
     return pairsProjects;
 }
-
-
 
 
 console.log(getGirls(students));
