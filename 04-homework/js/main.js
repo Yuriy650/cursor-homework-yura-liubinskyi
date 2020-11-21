@@ -1,19 +1,22 @@
 const students = ['Олександр', 'Ігор', 'Лука', 'Олена', 'Елізабет', 'Кармен', 'Олексій', 'Світлана', 'Антон', 'Любов', 'Галя', 'Юра', 'Дзвінка', 'Оля', 'Михайло'];
 
-console.log(students.length);
+console.log('Довжина заданого масиву:',students.length);
 
 const themes = ['Диференціальні рівняння', 'Теорія автоматів', 'Логіка', 'Алгоритми і структури даних', 'Математичний аналіз', 'ТІМС', 'РЧП', 'KT'];
 
-const marks = [5, 5, 4, 3, 4, 5, 3, 4, 4];
+const marks = [5, 5, 4, 3, 4, 5, 3, 4, 4, 5];
+
+const girlsName = ['Любов', 'Либідь', 'Елізабет', 'Адель', 'Кармен', 'Мадлен'];
+
+const boysName = ['Кузьма', 'Абдула', 'Лука', 'Олекса', 'Юра'];
+
 
 
 const getGirls = (students) => {
 
     let copyStudents = [...students];
 
-    let girlsName = ['Любов', 'Либідь', 'Елізабет', 'Адель', 'Мадлен', 'Кармен'];
 
-    let boysName = ['Кузьма', 'Абдула', 'Лука', 'Олекса', 'Юра'];
 
     let boys = [];
 
@@ -43,9 +46,6 @@ const getBoys = (students) => {
 
     let copyStudents = [...students];
 
-    let girlsName = ['Любов', 'Либідь', 'Елізабет', 'Адель', 'Кармен', 'Мадлен'];
-
-    let boysName = ['Кузьма', 'Абдула', 'Лука', 'Олекса', 'Юра'];
 
     let girls = [];
 
@@ -153,17 +153,17 @@ const getPairsThemesMarks = (students, themes) => {
 }
 
 
-console.log(getGirls(students));
+console.log('Функція формує масив дівчат:', getGirls(students));
 
-console.log(getBoys(students));
+console.log('Функція формує масив хлопців:', getBoys(students));
 
-console.log(getPairs(students));
+console.log('Повертає пари студентів:', getPairs(students));
 
-console.log(getPairsThemes(students, themes));
+console.log('Кожна пара отримує тему проекту:', getPairsThemes(students, themes));
 
-console.log(getStudentsMarks(students, marks));
+console.log('Виставляємо оцінки студентам:', getStudentsMarks(students, marks));
 
-console.log(getPairsThemesMarks(students, themes));
+console.log('Рандомні оцінки за проект:', getPairsThemesMarks(students, themes));
 
 
 
