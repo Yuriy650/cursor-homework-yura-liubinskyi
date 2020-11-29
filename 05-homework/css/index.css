@@ -1,0 +1,12 @@
+#body {
+    width: 600px;
+    background: aliceblue;
+    color: chocolate;
+    font-family: sans-serif;
+    font-size: 1.2em;
+
+}
+
+.data {
+    color: fuchsia;
+}
