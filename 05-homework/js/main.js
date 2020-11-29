@@ -128,7 +128,7 @@ const getMedian = (numbers) => {
 
 //const separator = /\s*(?:;|$)\s*/;
 
-console.log(`Медіана послідовності: ${getMedian(prompt('Input numbers. Find the median').split(','))}`);
+console.log(`Медіана послідовності: ${getMedian(prompt('Input numbers through a comma. Find the median').split(','))}`);
 
 
 const filterEvenNumbers = (numbers) => {
@@ -147,7 +147,7 @@ const filterEvenNumbers = (numbers) => {
 }
 
 
-console.log(`Видалити парні числа: ${filterEvenNumbers(prompt('Input numbers. Delete even numbers!').split(','))}`);
+console.log(`Видалити парні числа: ${filterEvenNumbers(prompt('Input numbers through a comma. Delete even numbers!').split(','))}`);
 
 
 
