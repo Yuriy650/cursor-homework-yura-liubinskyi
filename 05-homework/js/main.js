@@ -269,13 +269,17 @@ const generateCombinations = (word) => {
 
         let char = word[i].toLowerCase();
 
-        let wordNew = word.slice(0, i) + word.slice(i+1);
+        let wordWithoutChar = word.slice(0, i) + word.slice(i+1);
 
-        for (let wordNewOfArray of generateCombinations(wordNew)) {
+        let newWord;
 
-            if (!wordArray.includes(char + wordNewOfArray)) {
+        for (let wordNewOfArray of generateCombinations(wordWithoutChar)) {
 
-                wordArray.push(char + wordNewOfArray);
+            newWord = char + wordNewOfArray;
+
+            if (!wordArray.includes(newWord)) {
+
+                wordArray.push(newWord);
 
             }
 
