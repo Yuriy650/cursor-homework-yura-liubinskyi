@@ -15,8 +15,6 @@ const getRandomArray = (length, min, max) => {
 console.log(`Функція повертає масив випадкових цілих чисел: ${getRandomArray(10, 1, 20)}`);
 
 
-
-
 const getMode = (...numbers) => {
 
     console.log(numbers);
@@ -82,12 +80,11 @@ const getMode = (...numbers) => {
 console.log(`Мода послідовності: ${getMode(4, 2, 4, 88, 5, 5.8, 6, 6, 77.1, 88, 4, 88)}`);
 
 
-
 const getAverage = (...numbers) => {
 
     let count = numbers.reduce((count, number) => {
 
-        return count + number;
+        return count + number
 
     }, 0);
 
@@ -95,8 +92,7 @@ const getAverage = (...numbers) => {
 
 }
 
-console.log(`Середнє арифметичне: ${getAverage(5, 6, 6, 6, 7, 5)}`);
-
+console.log(`Середнє арифметичне: ${getAverage(5, 6, 6, 10, 10, 6, 7, 5, 0, 10, -10, 2)}`);
 
 
 const getMedian = (numbers) => {
@@ -130,9 +126,9 @@ const getMedian = (numbers) => {
 
 }
 
+//const separator = /\s*(?:;|$)\s*/;
+
 console.log(`Медіана послідовності: ${getMedian(prompt('Input numbers. Find the median').split(','))}`);
-
-
 
 
 const filterEvenNumbers = (numbers) => {
@@ -150,6 +146,7 @@ const filterEvenNumbers = (numbers) => {
     return numbers;
 }
 
+
 console.log(`Видалити парні числа: ${filterEvenNumbers(prompt('Input numbers. Delete even numbers!').split(','))}`);
 
 
@@ -157,20 +154,16 @@ console.log(`Видалити парні числа: ${filterEvenNumbers(prompt(
 
 const countPositiveNumbers = (...numbers) => {
 
-    let count = 0;
+    let posNumbers = numbers.filter((number) => {
 
-    for (let i = 0; i < numbers.length; i++) {
+        return number >= 0;
 
-        if (+numbers[i] <= 0) {
+    })
 
-            count += 1;
-        }
-    }
-
-    return count;
+    return posNumbers.length;
 }
 
-console.log(`Кількість додатних чисел послідовності: ${countPositiveNumbers(1, 5, -20, 0, -1)}`);
+console.log(`Кількість додатних чисел послідовності: ${countPositiveNumbers(1, 4, 5, 5, 20, 0, -1, -7, 5, 6, -7)}`);
 
 
 
@@ -217,8 +210,6 @@ const replaceBadWords = (sentence) => {
 console.log(`Замінити слова: ${replaceBadWords('Fuck off. Are you fucking kidding shit?')}`);
 
 
-
-
 const divideByThree = (text) => {
 
     let textArray = text.split(' ');
@@ -228,31 +219,28 @@ const divideByThree = (text) => {
     let partLongWord;
 
 
-        let longWord = textArray.filter((word) => {
+    let longWord = textArray.filter((word) => {
 
-            return word.length >= 3;
+        return word.length >= 3;
 
-        });
+    });
 
-        longWord.forEach((word) => {
+    longWord.forEach((word) => {
 
-            for (let j = 0; j < word.length; j +=3) {
+        for (let j = 0; j < word.length; j += 3) {
 
-                partLongWord = word.slice(j, j+3).toLowerCase();
+            partLongWord = word.slice(j, j + 3).toLowerCase();
 
-                partLongWordArr.push(partLongWord);
-            }
-        })
+            partLongWordArr.push(partLongWord);
+        }
+    })
 
 
-return partLongWordArr;
+    return partLongWordArr;
 
 }
 
 console.log(`Функція, що розбиває слова на склади: ${divideByThree('Створіть функцію divideByThree(word), яка розбиває кожне слово на умовні склади по 3 букви.')}`);
-
-
-
 
 
 const generateCombinations = (word) => {
@@ -269,7 +257,7 @@ const generateCombinations = (word) => {
 
         let char = word[i].toLowerCase();
 
-        let wordWithoutChar = word.slice(0, i) + word.slice(i+1);
+        let wordWithoutChar = word.slice(0, i) + word.slice(i + 1);
 
         let newWord;
 
@@ -287,7 +275,7 @@ const generateCombinations = (word) => {
 
     }
 
-   return wordArray;
+    return wordArray;
 
 }
 
