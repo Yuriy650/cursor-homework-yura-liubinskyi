@@ -15,6 +15,9 @@ const getRandomArray = (length, min, max) => {
 console.log(`Функція повертає масив випадкових цілих чисел: ${getRandomArray(10, 1, 20)}`);
 
 
+
+
+
 const getMode = (...numbers) => {
 
     console.log(numbers);
@@ -78,6 +81,9 @@ const getMode = (...numbers) => {
 }
 
 console.log(`Мода послідовності: ${getMode(4, 2, 4, 88, 5, 5.8, 6, 6, 77.1, 88, 4, 88)}`);
+
+
+
 
 
 const getAverage = (...numbers) => {
