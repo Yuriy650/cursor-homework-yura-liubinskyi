@@ -12,7 +12,7 @@ function maxDigitInNumber(number) {
 
 const getPowNumber = (number, power) => {
     let powNumber = 1;
-    let indicate = number*power;
+    const indicate = number * power;
     if (power > 0 && indicate) {
         for (let i = 1; i <= power; i++) powNumber *= number;
     } else if (power < 0 && indicate) {
@@ -27,7 +27,7 @@ const getPowNumber = (number, power) => {
 
 const withCapitalLetter = (word) => {
     word = word.toLowerCase();
-    let firstChar = word[0].toUpperCase();
+    const firstChar = word[0].toUpperCase();
     let subWord = word.slice(1);
     word = firstChar + subWord;
     return word;
@@ -48,11 +48,11 @@ const getRealSalary = (salary) => {
 
 
 const randomNumber = (firstNumber, endNumber) => {
-       let random = firstNumber + Math.ceil((endNumber - firstNumber) * Math.random());
-       if (random === undefined || isNaN(random)) return 0;
-        else {
-           return  random;
-       }
+    const random = firstNumber + Math.ceil((endNumber - firstNumber) * Math.random());
+    if (random === undefined || isNaN(random)) return 0;
+    else {
+        return random;
+    }
 }
 
 
@@ -104,12 +104,11 @@ const convertCurrency = (amountCurrency) => {
 
 const getRandomPassword = (numberDigits = 8) => {
     let login = '';
-    const n = null;
     if (numberDigits > 0) {
         for (let i = 1; i <= numberDigits; i++) {
             login += Math.floor(Math.random() * 10);
         }
-    } else if (numberDigits === n || numberDigits === 0) {
+    } else if (numberDigits === null || numberDigits === 0) {
         login = '11111111';
     }
     return login;
