@@ -32,9 +32,9 @@ console.log(`Загальна сума податків в Латвії: ${getTo
 const countryArray = [ukraine, litva, latvia];
 const max = 2000;
 const min = 1500;
-function getMyProfits() {
+/*function getMyProfits() {
     return +(salary - this.taxes).toFixed(2);
-}
+}*/
 const getMySalary = () => {
     const arraySalary = countryArray.map((country) => {
         let salary = +(Math.random()*(max-min)+min).toFixed(2);
@@ -47,9 +47,9 @@ const getMySalary = () => {
     })
     console.log(arraySalary);
 }
-let timer = setTimeout(function getSalary(){
+let setTime = setTimeout(function getSalary(){
     getMySalary();
-    timer = setTimeout(getSalary, 7000);
+    setTime = setTimeout(getSalary, 7000);
 }, 7000);
 
 
