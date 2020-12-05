@@ -9,9 +9,9 @@ const litva = { name: 'litva', tax: 0.15, middleSalary: 1509, vacancies: 1114 };
 function getMyTaxes(salary) {
     return +(this.tax*salary).toFixed(2);
 }
-console.log(`Податки, сплачені в Україні: ${getMyTaxes.call(ukraine, 2000)}`);
-console.log(`Податки, сплачені в Литві: ${getMyTaxes.call(litva, 1800)}`);
-console.log(`Податки, сплачені в Латвії: ${getMyTaxes.call(latvia, 1900)}`);
+console.log(`Податки, сплачені в Україні: ${getMyTaxes.call(ukraine, 2000)} usd`);
+console.log(`Податки, сплачені в Литві: ${getMyTaxes.call(litva, 1800)} usd` );
+console.log(`Податки, сплачені в Латвії: ${getMyTaxes.call(latvia, 1900)} usd`);
 
 function getMiddleTaxes() {
     return (this.tax*this.middleSalary).toFixed(2) + ' usd';
@@ -37,7 +37,7 @@ const min = 1500;
 }*/
 const getMySalary = () => {
     const arraySalary = countryArray.map((country) => {
-        let salary = +(Math.random()*(max-min)+min).toFixed(2);
+        const salary = +(Math.random()*(max-min)+min).toFixed(2);
         return {
             name: country.name,
             salary,
@@ -45,7 +45,9 @@ const getMySalary = () => {
             profits: +(salary - getMyTaxes.call(country, salary)).toFixed(2)
         }
     })
-    console.log(arraySalary);
+    for (i=0;i<arraySalary.length;i++) {
+        console.log(arraySalary[i]);
+    }
 }
 let setTime = setTimeout(function getSalary(){
     getMySalary();
