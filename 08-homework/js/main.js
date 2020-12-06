@@ -70,7 +70,7 @@ const ruslan = new BudgetStudent('PTU', 1, 'Ruslan Andik', [4, 3, 3, 4]);
 console.log(anya);
 console.log(BudgetStudent.getInfo(vitalik.university, vitalik.course, vitalik.fullName, vitalik.marks));
 //2.
-//3. Метод отримання стипендії автоматично викликається кожні 30 секунд післе створення об'єкту. Підказка: викликайте його в constructor
+//3.
 vitalik.getScholarship(1000);
 let timer = setTimeout(function getMyScholarship() {
     ruslan.getScholarship(1000);
