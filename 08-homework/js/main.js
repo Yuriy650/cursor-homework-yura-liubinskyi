@@ -5,35 +5,60 @@ class Student {
         this.fullName = fullName;
         this.marks = marks;
     }
+
     getAverageMark() {
         let count = this.marks.reduce((count, number) => {
             return count + number
         }, 0);
         return +(count / this.marks.length).toFixed(2);
     }
+
     dismiss() {
-        this.marks = null;
-        return this.marks;
+        return this.marks = null;
     }
+
     recover() {
-        this.marks = [];
-        return this.marks;
+        return this.marks = [];
     }
+
     studentsIndicate() {
         if (!this.marks) {
             return `Student left the univer`;
-        } return `${this.fullName} come back to the university`;
+        }
+        return `${this.fullName} come back to the university`;
     }
+
     static getInfo(university, course, fullName) {
         return `${fullName} - student ${course} course of ${university}`;
     }
+
     get getMarks() {
         return this.marks;
     }
+
     set setMarks(mark) {
         return this.marks = [...this.marks, mark];
     }
 }
+
+//1 Створіть новий клас BudgetStudent, який повністю наслідує клас Student
+class BudgetStudent extends Student {
+    constructor(university, course, fullName, marks, scholarship) {
+        super(university, course, fullName, marks);
+        this.scholarship = scholarship;
+    }
+
+    getScholarship(scholarship) {
+        console.log(`${this.fullName} received ${scholarship} uah scholarship`);
+    }
+
+    checkMark(scholarship) {
+        if (this.getAverageMark() >= 4) {
+            this.getScholarship(scholarship);
+        } else console.log(`${this.fullName} go away!`);
+    }
+}
+
 const sasha = new Student('Oxford University', 1, 'Oleksndr Ivaniv', [5, 5, 4, 4]);
 const galya = new Student('Politech University', 2, 'Galyna Stankiv', [4, 4, 5, 4]);
 const yura = new Student('Franko National University. of Lviv', 3, 'Yuriy Krups', [3, 4, 5, 3]);
@@ -41,32 +66,18 @@ const inna = new Student('National University. of Kyiv', 3, 'Inna Bank', [3, 3, 
 console.log(galya);
 console.log(yura);
 console.log(Student.getInfo(sasha.university, sasha.course, sasha.fullName));
-sasha.setMarks = 5;
+sasha.setMarks = 3;
 console.log(sasha.getMarks);
 console.log(galya.getAverageMark());
 console.log(inna.dismiss());
 console.log(inna.recover());
 inna.setMarks = 5;
+inna.setMarks = 4;
 console.log(inna);
 console.log(yura.getMarks);
-//1 Створіть новий клас BudgetStudent, який повністю наслідує клас Student
-class BudgetStudent extends Student {
-    constructor(university, course, fullName, marks, scholarship) {
-        super(university, course, fullName, marks);
-        this.schlarship = scholarship;
-    }
-    getScholarship(scholarship) {
-        console.log(`${this.fullName} received ${scholarship} uah scholarship`);
-    }
-    checkMark(scholarship) {
-        if (this.getAverageMark() >= 4) {
-            this.getScholarship(scholarship);
-        }  else console.log(`${this.fullName} go away!`);
-    }
-}
 const vitalik = new BudgetStudent('INFIZ', 4, 'Vitaliy Kovalyk', [4, 5, 3, 4]);
-const anya = new BudgetStudent('Сommercial Academy', 2, 'Anna Fedor', [5, 4, 5, 5]);
-const ruslan = new BudgetStudent('PTU', 1, 'Ruslan Andik', [4, 3, 3, 4]);
+const anya = new BudgetStudent('Сommercial Academy', 2, 'Anna Fedor', [5, 4, 5, 5], 1500);
+const ruslan = new BudgetStudent('PTU', 1, 'Ruslan Andik', [4, 3, 3, 4], 1200);
 console.log(anya);
 console.log(BudgetStudent.getInfo(vitalik.university, vitalik.course, vitalik.fullName, vitalik.marks));
 //2.
