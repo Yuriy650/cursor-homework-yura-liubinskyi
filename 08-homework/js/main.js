@@ -47,8 +47,14 @@ class BudgetStudent extends Student {
             this.getScholarship(scholarship);
         } else console.log(`${this.fullName} go away!`);
     }
+    static getTimer(student) {
+        student.timer = setTimeout(function getMyScholarship() {
+            student.getScholarship(1000);
+            student.timer = setTimeout(getMyScholarship, 10000);
+        }, 10000);
+    }
 }
-const sasha = new Student('Oxford University', 1, 'Oleksndr Ivaniv', [5, 5, 4, 4]);
+const sasha = new Student('Oxford University', 1, 'Oleksandr Ivaniv', [5, 5, 4, 4]);
 const galya = new Student('Politech University', 2, 'Galyna Stankiv', [4, 4, 5, 4]);
 const yura = new Student('Franko National University. of Lviv', 3, 'Yuriy Krups', [3, 4, 5, 3]);
 const inna = new Student('National University. of Kyiv', 3, 'Inna Bank', [3, 3, 5, 3]);
@@ -66,20 +72,17 @@ console.log(inna);
 console.log(yura.getMarks);
 const vitalik = new BudgetStudent('INFIZ', 4, 'Vitaliy Kovalyk', [4, 5, 3, 4]);
 const anya = new BudgetStudent('Сommercial Academy', 2, 'Anna Fedor', [5, 4, 5, 5], 1500);
-const ruslan = new BudgetStudent('PTU', 1, 'Ruslan Andik', [4, 3, 3, 4], 1200);
+const ostap = new BudgetStudent('Higher School of Psyсhology', 1, 'Ostap Bender', [4, 3, 3, 4], 1200);
 console.log(anya);
 console.log(BudgetStudent.getInfo(vitalik.university, vitalik.course, vitalik.fullName, vitalik.marks));
 //2.
 //3.
 vitalik.getScholarship(1000);
-/*let timer = setTimeout(function getMyScholarship() {
-    ruslan.getScholarship(1000);
-    timer = setTimeout(getMyScholarship, 10000);
-}, 10000);*/
+BudgetStudent.getTimer(ostap);
 //4. Студент отримує стипендію тільки в тому випадку, якщо середній бал у нього вище або дорівнює 4.0
 anya.checkMark(2500);
 vitalik.checkMark(2500);
-ruslan.checkMark(2500);
+ostap.checkMark(2500);
 //5. Якщо студента виключено, він не отримує стипендію (думаю це було і так очевидно :) )
 vitalik.dismiss();
 console.log(vitalik.studentsIndicate());
