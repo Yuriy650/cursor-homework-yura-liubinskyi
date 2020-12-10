@@ -1,17 +1,14 @@
 const generateBlocks = () => {
-    document.body.childNodes[0].remove();
+    const numberBlocks = 25;
     const square = document.createElement('div');
+    document.body.childNodes[0].remove();
     square.classList.add('square');
     document.body.prepend(square);
-    for (let i = 0; i < 5; i++) {
-        const tr = document.createElement('div');
-        for (let j = 0; j < 5; j++) {
-            const block = document.createElement('div');
-            block.classList.add('blocks');
-            tr.append(block);
-            block.style.background = getColor();
-        }
-        square.append(tr);
+    for (let i=0; i<numberBlocks;i++) {
+        const block = document.createElement('div');
+        block.classList.add('blocks');
+        block.style.background = getColor();
+        square.append(block);
     }
 }
 function getColor() {
