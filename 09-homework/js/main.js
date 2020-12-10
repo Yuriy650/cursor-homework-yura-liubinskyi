@@ -18,6 +18,6 @@ const delay = 1000;
 function generateBlocksInterval() {
     setInterval(generateBlocks, delay);
 }
-const button = document.querySelector('.button');
+const button = document.querySelector('.click_button');
 button.addEventListener('click', generateBlocksInterval);
 
