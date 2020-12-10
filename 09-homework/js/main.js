@@ -14,7 +14,8 @@ const generateBlocks = () => {
 function getColor() {
     return '#' + Math.random().toString(16).slice(5, 11);
 }
+const delay = 1000;
 function generateBlocksInterval() {
-    setInterval(generateBlocks, 1000);
+    setInterval(generateBlocks, delay);
 }
 
