@@ -4,7 +4,7 @@ const generateBlocks = () => {
     document.body.childNodes[0].remove();
     square.classList.add('square');
     document.body.prepend(square);
-    for (let i=0; i<numberBlocks;i++) {
+    for (let i = 0; i < numberBlocks; i++) {
         const block = document.createElement('div');
         block.classList.add('blocks');
         block.style.background = getColor();
@@ -18,4 +18,6 @@ const delay = 1000;
 function generateBlocksInterval() {
     setInterval(generateBlocks, delay);
 }
+const button = document.querySelector('.button');
+button.addEventListener('click', generateBlocksInterval);
 
