@@ -1,10 +1,38 @@
-#myClick {
-    background-color: #4CAF50;
-    border: none;
-    color: black;
-    padding: 15px 32px;
+.key_Z, .key_X, .key_C, .key_V, .key_B, .key_N, .key_M {
+    background: transparent;
+    color: red;
+    padding: 18px;
     text-align: center;
     text-decoration: none;
+    font-family: Geneva, sans-serif;
     display: inline-block;
-    font-size: 16px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 8px;
+    width: 100px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    border: 3px solid white;
+    opacity: 1;
 }
+
+#buttons_menu {
+    display: flex;
+    width: 800px;
+    margin-top: 20%;
+    margin-left: 25%;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+body {
+    background: url("../images/imageback.png");
+}
+
+.push_button {
+    background-color: black;
+    border-color: coral;
+    box-shadow: 0 0 25px coral;
+}
+
