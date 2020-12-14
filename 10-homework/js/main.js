@@ -21,14 +21,14 @@ console.log([...buttons]);
         }
     });
 });
-document.addEventListener('mousedown', function (event) {
+const mouseDown = document.addEventListener('mousedown', function (event) {
     if (event.target.className === 'key_' + event.target.textContent[0]) {
         let fileName = event.target.textContent.slice(2);
         playSounds(fileName);
         event.target.classList.add('push_button');
     }
 })
-document.addEventListener('mouseup', function (event) {
+const mouseUp = document.addEventListener('mouseup', function (event) {
     event.target.classList.remove('push_button');
 })
 
