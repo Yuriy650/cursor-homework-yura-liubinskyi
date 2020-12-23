@@ -1,0 +1,156 @@
+body {
+    width: 100%;
+    height: 100%;
+    background: url("../images/starwars.png");
+    font-family: "Pathway Gothic One", "Century Gothic",sans-serif;
+    font-size: 1.1em;
+
+}
+h2{
+    text-align: center;
+    padding: 15px;
+    margin: 15px;
+}
+#heading{
+
+    color: orange;
+    text-align: center;
+    margin-left: 30px;
+
+}
+#characters, #planets, #wookiee, #next, #films{
+    margin-left: 30px;
+}
+#menu {
+    display: inline-flex;
+}
+.menu {
+    display: inline;
+    padding: 5px;
+    margin: 5px;
+}
+.character_1, .character_2, .character_3, .character_4, .character_5,
+.character_10, .character_13, .character_14, .character_18, .character_20,
+.character_21, .character_22, .character_23, .character_24, .character_25,
+.character_26{
+    background: transparent;
+    height: 40px;
+    width: 100px;
+    font-size: 16px;
+    border: 1px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 17px orange;
+    color: white;
+    padding: 7px;
+    text-align: center;
+    text-decoration: none;
+    font-family: "Yu Gothic Medium","MS Gothic", sans-serif;
+
+    }
+#characters, #planets, #wookiee, #next, #back{
+    background: transparent;
+    height: 50px;
+    width: 150px;
+    font-size: 16px;
+    border: 1px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 17px orange;
+    color: white;
+    padding: 7px;
+    text-align: center;
+    text-decoration: none;
+    font-family: "Yu Gothic Medium","MS Gothic", sans-serif;
+
+}
+{.character_1, .character_2, .character_3, .character_4, .character_5,
+.character_10, .character_13, .character_14, .character_18, .character_20,
+.character_21, .character_22, .character_23, .character_24, .character_25,
+.character_26}:hover {
+    color: orange;
+              }
+#planets:hover{
+    color:red
+                       }
+#characters:hover{
+    color: red
+}
+#next:hover{
+    color: red
+}
+#back:hover{
+    color: red
+}
+#wookiee:hover{
+    color: red
+}
+
+.push_button {
+    background-color: darkred;
+    border-color: coral;
+    box-shadow: 0 0 35px coral;
+}
+.form_buttons {
+    margin-left: 50px;
+    margin-top: 10px;
+}
+.inline {
+    float: left;
+    margin: 0 15px 15px 0;
+    padding: 10px;
+}
+.back {
+    float: right;
+    padding: 5px;
+    margin: 10px
+}
+
+#name1, #name5, #name2, #name3, #name4, #name10, #name13, #name14, #name18, #name20, #name21, #name22,
+#name23, #name24, #name25, #name26 {
+    float: right;
+    margin: 10px;
+    padding: 5px;
+    width: 150px;
+    height: 300px;
+}
+.skywalker_image, .leia_image, .C-3PO_image, .r2d2_image, .darth_vader_image, .kenobi_image, .chewbacca_image, .solo_image,
+.wedge_image, .joda_image, .palpatine_image, .boba_image, .ig-88_image, .bossk_image, .lando_image, .lobot_image{
+    float: left;
+    width: 440px;
+    padding: 20px;
+    margin: 5px;
+    }
+
+.heroes{
+    display: inline-flex;
+}
+.heroes img{
+    padding-left: 50px;
+}
+
+#charactersList img{
+    float: left;
+    line-height: 1.5em;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 50%;
+    box-shadow: 0 0 15px orange;
+}
+#charactersList li {
+    line-height: 7em;
+}
+#planetsList li {
+    line-height: 2em;
+}
+#wookieeList li{
+    line-height: 2em;
+}
+#filmsList li{
+    line-height: 2em;
+}
+#all_characters {
+    font-weight: bold;
+    padding: 10px;
+    margin-left: 40px;
+}
+
+
