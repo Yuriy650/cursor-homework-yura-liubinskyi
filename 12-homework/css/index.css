@@ -1,5 +1,5 @@
 body {
-    width: 1500px;
+    width: 1600px;
     height: 100%;
     background: url("../images/starwars.png");
     font-family: "Pathway Gothic One", "Century Gothic",sans-serif;
@@ -19,7 +19,7 @@ h2{
 
 }
 #characters, #planets, #wookiee, #next, #films{
-    margin-left: 30px;
+    margin-left: 20px;
 }
 #menu {
     display: inline-flex;
@@ -104,7 +104,7 @@ h2{
     margin: 10px
 }
 .back img {
-    padding-left: 20px;
+    padding-left: 10px;
     width: 600px;
     height: 450px;
 
@@ -142,7 +142,7 @@ h2{
     box-shadow: 0 0 15px orange;
 }
 #charactersList li {
-    line-height: 7em;
+    line-height: 8em;
 }
 #planetsList li {
     line-height: 2em;
