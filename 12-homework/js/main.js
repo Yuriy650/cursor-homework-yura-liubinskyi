@@ -18,7 +18,7 @@ const index = [1, 2, 3, 4, 5, 10, 13, 14, 18, 20, 21, 22, 23, 24, 25, 26];
 index.forEach(item => {
     document.querySelector(`.character_${item}`).addEventListener('mousedown', async function getPeople() {
 
-        await fetch(`http://swapi.dev/api/people/${item}/`).then((res) => {
+        await fetch(`https://swapi.dev/api/people/${item}/`).then((res) => {
             return res.json()
         })
             .then((data) => console.log(data));
@@ -34,7 +34,7 @@ const getInformation = () => {
         const newLiName = document.createElement('li');
 
         async function getName(newLi) {
-            await fetch(`http://swapi.dev/api/people/${item}/`).then((res) => {
+            await fetch(`https://swapi.dev/api/people/${item}/`).then((res) => {
                 return res.json()
             })
                 .then((data) => newLi.innerHTML = data.name);
@@ -45,7 +45,7 @@ const getInformation = () => {
         const newLiDay = document.createElement('li');
 
         async function getBirthDay(newLi) {
-            await fetch(`http://swapi.dev/api/people/${item}/`).then((res) => {
+            await fetch(`https://swapi.dev/api/people/${item}/`).then((res) => {
                 return res.json()
             })
                 .then((data) => newLi.innerHTML = data.birth_year);
@@ -56,7 +56,7 @@ const getInformation = () => {
         const newLiGender = document.createElement('li');
 
         async function getGender(newLi) {
-            await fetch(`http://swapi.dev/api/people/${item}/`).then((res) => {
+            await fetch(`https://swapi.dev/api/people/${item}/`).then((res) => {
                 return res.json()
             })
                 .then((data) => newLi.innerHTML = data.gender);
@@ -76,7 +76,7 @@ index.forEach(item => {
     const newLi = getNewLi();
     const img = document.createElement('img');
     document.querySelector('#characters').addEventListener('click', async function getCharacters() {
-        await fetch(`http://swapi.dev/api/people/${item}/`).then((res) => {
+        await fetch(`https://swapi.dev/api/people/${item}/`).then((res) => {
             return res.json()
         })
             .then((data) => newLi.innerHTML = `${data.name}` + '_' + `${data.birth_year}` + '_' + `${data.gender}`)
@@ -89,12 +89,12 @@ index.forEach(item => {
 })
 document.querySelector('#show_film').addEventListener('change', async function getFilms(event) {
     const newLi = getNewLi();
-    await fetch(`http://swapi.dev/api/films/`).then((res) => {
+    await fetch(`https://swapi.dev/api/films/`).then((res) => {
         return res.json()
     })
         .then((data) => newLi.innerHTML = `${data.results[event.target.value - 1].title}`+'_'+`${data.results[event.target.value - 1].release_date.slice(0,4)}`+
             '_'+`${data.results[event.target.value - 1].director}`)
-    document.querySelector('#filmsList').appendChild(newLi);
+    document.querySelector('#filmsList').append(newLi);
 })
 indexPlanet = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 indexPlanet.forEach(item => {
