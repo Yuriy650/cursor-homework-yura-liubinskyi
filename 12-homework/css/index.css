@@ -103,6 +103,12 @@ h2{
     padding: 5px;
     margin: 10px
 }
+.back img {
+    padding-left: 20px;
+    width: 500px;
+    height: 375px;
+
+}
 
 #name1, #name5, #name2, #name3, #name4, #name10, #name13, #name14, #name18, #name20, #name21, #name22,
 #name23, #name24, #name25, #name26 {
