@@ -1,5 +1,5 @@
 body {
-    width: 1600px;
+    width: 1500px;
     height: 100%;
     background: url("../images/starwars.png");
     font-family: "Pathway Gothic One", "Century Gothic",sans-serif;
@@ -99,15 +99,14 @@ h2{
     padding: 10px;
 }
 .back {
+    display: inline;
     float: right;
-    padding: 5px;
+    padding-right: 25px;
     margin: 10px
 }
 .back img {
     padding-left: 10px;
-    width: 600px;
-    height: 450px;
-
+    margin-left: 5px;
 }
 
 #name1, #name5, #name2, #name3, #name4, #name10, #name13, #name14, #name18, #name20, #name21, #name22,
