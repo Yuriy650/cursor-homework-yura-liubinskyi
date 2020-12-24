@@ -30,4 +30,4 @@ console.log(fontGenerator.next('down').value);
 console.log(fontGenerator.next('down').value);
 console.log(fontGenerator.next('down').value);
 console.log(fontGenerator.next().value);
-document.querySelector('#changeFont').addEventListener('click', fontGenerator.next('up').value);
+
