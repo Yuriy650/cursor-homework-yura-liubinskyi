@@ -1,15 +1,54 @@
-#body {
-    width: 600px;
+body {
+
     background: aliceblue;
     color: chocolate;
     font-family: sans-serif;
-    font-size: 1.2em;
+
 
 }
-#changeFont{
+#change_font{
     text-align: center;
+    font-size: 14px;
+
 }
 
 .data {
     color: fuchsia;
+}
+#buttons_menu{
+    display: flex;
+    width: 200px;
+    margin-left: 42%;
+    justify-content: space-between;
+    align-items: center;
+
+}
+#bigger_font, #smaller_font {
+    background-color: lightblue;
+    color: red;
+    text-align: center;
+    text-decoration: none;
+    font-family: Geneva, sans-serif;
+    padding: 18px;
+    display: inline-block;
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 8px;
+    width: 70px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    border: 3px solid white;
+    opacity: 1;
+}
+#bigger_font:focus {
+    border-color: green;
+                             }
+#smaller_font:focus {
+    border-color: green;
+}
+#bigger_font:hover {
+    color: #acdc00;
+}
+#smaller_font:hover {
+    color: #acdc00;
 }
