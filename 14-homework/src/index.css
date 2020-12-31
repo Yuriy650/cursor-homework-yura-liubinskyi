@@ -1,0 +1,33 @@
+body {
+    background-color: ghostwhite;
+}
+.square {
+    width: 250px;
+    height: 250px;
+    display: flex;
+    flex-grow: 0;
+    flex-shrink: 0;
+    padding: 5px;
+    flex-wrap: wrap;
+}
+
+.blocks {
+    width: 50px;
+    height: 50px;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+.click_button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+
+
